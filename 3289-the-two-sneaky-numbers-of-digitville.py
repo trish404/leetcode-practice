@@ -1,0 +1,17 @@
+class Solution(object):
+    def getSneakyNumbers(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        seen = set()
+        res = []
+        for x in nums:
+            if x in seen:
+                res.append(x)
+                if len(res) == 2:
+                    return res
+            else:
+                seen.add(x)
+        return res
+        
