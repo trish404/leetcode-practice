@@ -1,0 +1,13 @@
+class Solution(object):
+    def findClosest(self, x, y, z):
+        """
+        :type x: int
+        :type y: int
+        :type z: int
+        :rtype: int
+        """
+        if abs(z-y) > abs(z-x):
+            return 1
+        elif abs(z-y) == abs(z-x):
+            return 0
+        else: return 2
